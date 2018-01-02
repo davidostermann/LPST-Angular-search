@@ -1,0 +1,17 @@
+<div class="seach_container">
+  <h2>SEARCH 04</h2>
+  <p>On ajoute quelques fonctionnalités :</p>
+  <h3>Un bon typeahead a quelques particularités :</h3>
+  <ul>
+    <li>il affiche des propositions qui correspondent à la recherche (évidemment)</li>
+    <li>il permet de n’afficher les résultats que si la saisie contient déjà quelques caractères</li>
+    <li>il ne chargera pas les résultats pour chaque frappe de l’utilisateur-trice, mais attendra un peu pour être sûr qu’il/elle
+    a fini de taper</li>
+    <li>il ne déclenchera pas deux fois la même requête si l’utilisateur-trice saisit la même recherche.</li>
+  </ul>
+
+  <input type="text" name="term" [formControl]="term">
+  <ul>
+    <li *ngFor="let user of users$ | async"> {{ user.name }}</li>
+  </ul>
+</div>

@@ -1,0 +1,9 @@
+<div class="seach_container">
+  <h2>SEARCH 00</h2>
+  <p>Simple manner</p>
+  <input type="text" [placeholder]="placeHolder" name="term" #term (input)="termChange(term.value)">
+  <p>{{term.value}}</p>
+  <ul>
+    <li *ngFor="let user of users"> {{ user.name }}</li>
+  </ul>
+</div>

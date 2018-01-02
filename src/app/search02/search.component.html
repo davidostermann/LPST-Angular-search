@@ -1,0 +1,8 @@
+<div class="seach_container">
+  <h2>SEARCH 02</h2>
+  <p>Model driven form : Reactive form</p>
+  <input type="text" name="term" [formControl]="term">
+  <ul>
+    <li *ngFor="let user of users"> {{ user.name }}</li>
+  </ul>
+</div>

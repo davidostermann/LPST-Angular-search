@@ -1,0 +1,9 @@
+<div class="seach_container">
+  <h2>SEARCH 01</h2>
+  <p>Template driven model (ngForm, ngModel)</p>
+  <input type="text" name="term" [(ngModel)]="term" (ngModelChange)="termModelChange()">
+  <p>{{term}}</p>
+  <ul>
+    <li *ngFor="let user of users"> {{ user.name }}</li>
+  </ul>
+</div>

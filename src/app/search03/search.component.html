@@ -1,0 +1,8 @@
+<div class="seach_container">
+  <h2>SEARCH 03</h2>
+  <p>With async observable on ngFor</p>
+  <input type="text" name="term" [formControl]="term">
+  <ul>
+    <li *ngFor="let user of users$ | async"> {{ user.name }}</li>
+  </ul>
+</div>
