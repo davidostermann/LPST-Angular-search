@@ -22,8 +22,10 @@ export class SearchComponent implements OnInit {
       filter(value => value.length > 3), // 3 caractères min.
       debounceTime(400), // ne déclenche la suite de la séquence (en prennant la derniere saisie) au minimum toutes les 400 millisecondes
       distinctUntilChanged(), // ne déclenche la suite de la séquence seulement si la valeur est différente de celle saisi il y a
-      tap( value => console.log('1.value : ', value)),
+      tap( value => console.log('1.value : ', value)), // log
       switchMap(value => this.userService.search(value)),
+      // Je prends la dernier element emis et pas le dernier element arrivée (le requete au server ne prenne pas le meme temps)
+      // afin d'être synchro avec la frappe utilisateur
       tap( value => console.table('2.value : ', value)),
     );
   }
