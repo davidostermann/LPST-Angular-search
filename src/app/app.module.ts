@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { UserService } from './user.service';
@@ -23,10 +24,13 @@ import { from } from 'rxjs/observable/from';
     Search03Component,
     Search04Component
   ],
-  imports: [BrowserModule,
+  imports: [
+    BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule],
+    FormsModule,
+    BrowserAnimationsModule
+  ],
   providers: [UserService],
   bootstrap: [AppComponent]
 })
